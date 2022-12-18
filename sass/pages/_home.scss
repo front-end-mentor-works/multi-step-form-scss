@@ -1,0 +1,29 @@
+.container {
+  width: 65%;
+  height: 75%;
+  margin: 6% auto 0;
+  background-color: $White;
+  padding: 1rem;
+  display: flex;
+  border-radius: 1rem;
+}
+.main {
+  padding: 4.8rem 9.6rem;
+  width: 75%;
+  position: relative;
+
+  .heading {
+    &-primary {
+      color: $Marine-blue;
+      font-weight: 700;
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+    }
+    &-desc {
+      color: $Cool-gray;
+      font-weight: 400;
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.addon-box {
+  &es {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  display: flex;
+  padding: 1.6rem 0;
+  border-radius: 0.6rem;
+  border: 0.1rem solid $Cool-gray;
+  &.active {
+    border: 0.13rem solid $Purplish-blue;
+  }
+  .checkbox {
+    &-container {
+      width: 15%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-addon {
+      accent-color: $Purplish-blue;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+  .details {
+    width: 70%;
+    .name {
+      color: $Marine-blue;
+      margin-bottom: 6px;
+    }
+    .benefit {
+      color: $Cool-gray;
+    }
+  }
+  .pricing {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pricing {
+    color: $Purplish-blue;
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+input[type="checkbox"]:checked {
+  filter: none;
+}

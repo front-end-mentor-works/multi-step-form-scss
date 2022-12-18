@@ -1,0 +1,18 @@
+.step_5 {
+  padding-top: 20%;
+  text-align: center;
+  .thankyou_icon {
+    &-box {
+      margin-bottom: 2.4rem;
+    }
+    .heading-primary{
+        margin-bottom: 1.6rem !important;
+    }
+  }
+
+  .success_text {
+    color: $Light-gray;
+    padding: 0 3.2rem;
+
+  }
+}

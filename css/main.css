@@ -1,0 +1,421 @@
+/*
+  0 - 600px:      Phone
+  600 - 900px:    Tablet portrait
+  900 - 1200px:   Tablet landscape
+  [1200 - 1800] is where our normal styles apply
+  1800px + :      Big desktop
+
+  $breakpoint arguement choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+
+  ORDER: Base + typography > general layout + grid > page layout > components
+
+  1em = 16px
+  */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: hsl(217deg, 100%, 97%);
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.u-margin-right-small {
+  margin-right: 0.6rem;
+}
+
+.u-margin-left-medium {
+  margin-left: 1rem;
+}
+
+.sidebar {
+  width: 25%;
+  height: 100%;
+  background-image: url(./../../assets/images/bg-sidebar-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sidebar .step {
+  display: flex;
+  gap: 20px;
+}
+.sidebar .steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 48px 24px;
+}
+.sidebar .step_num {
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 0.2rem solid hsl(228deg, 100%, 84%);
+}
+.sidebar .step_head {
+  text-transform: uppercase;
+}
+.sidebar .step_head-sub {
+  color: hsl(231deg, 11%, 63%);
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+.sidebar .step_head-main {
+  color: hsl(231deg, 100%, 99%);
+  font-size: 1.4rem;
+}
+
+.step_1 .form_group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.step_1 .form_label {
+  display: block;
+  color: hsl(213deg, 96%, 18%);
+  margin-bottom: 0.6rem;
+}
+.step_1 .form_control {
+  border: 0.5px solid hsl(231deg, 11%, 63%);
+  border-radius: 0.6rem;
+  outline: none;
+  width: 100%;
+  padding: 0.4rem 1rem;
+  height: 4rem;
+}
+.step_1 .form_control::-moz-placeholder {
+  color: hsl(231deg, 11%, 63%);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.step_1 .form_control:-ms-input-placeholder {
+  color: hsl(231deg, 11%, 63%);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.step_1 .form_control::placeholder {
+  color: hsl(231deg, 11%, 63%);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.plan_box {
+  border: 0.1rem solid hsl(231deg, 11%, 63%);
+  border-radius: 0.6rem;
+  padding: 2.4rem 0 1.2rem 1.6rem;
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.plan_boxes {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.plan_data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+.plan_name {
+  color: hsl(213deg, 96%, 18%);
+  font-weight: 700;
+}
+.plan_pricing {
+  font-weight: 400;
+  color: hsl(231deg, 11%, 63%);
+}
+
+.plan-switch-box {
+  background-color: hsl(217deg, 100%, 97%);
+  border-radius: 0.6rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 3.2rem auto 0;
+  justify-content: center;
+  padding: 1.2rem 0;
+  border-radius: 0.6rem;
+}
+.plan-duration {
+  color: hsl(231deg, 11%, 63%);
+  font-weight: 700;
+}
+.plan-duration_active {
+  color: hsl(213deg, 96%, 18%);
+}
+
+.addon-box {
+  display: flex;
+  padding: 1.6rem 0;
+  border-radius: 0.6rem;
+  border: 0.1rem solid hsl(231deg, 11%, 63%);
+}
+.addon-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.addon-box.active {
+  border: 0.13rem solid hsl(243deg, 100%, 62%);
+}
+.addon-box .checkbox-container {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addon-box .checkbox-addon {
+  accent-color: hsl(243deg, 100%, 62%);
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.addon-box .details {
+  width: 70%;
+}
+.addon-box .details .name {
+  color: hsl(213deg, 96%, 18%);
+  margin-bottom: 6px;
+}
+.addon-box .details .benefit {
+  color: hsl(231deg, 11%, 63%);
+}
+.addon-box .pricing {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addon-box .pricing {
+  color: hsl(243deg, 100%, 62%);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+input[type=checkbox]:checked {
+  filter: none;
+}
+
+.step_4 .final_bill-box {
+  margin-top: 6%;
+}
+.step_4 .final_bill-box .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.step_4 .final_bill-box .item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.step_4 .final_bill-box .item_list {
+  background-color: hsl(217deg, 100%, 97%);
+  border-radius: 0.6rem;
+  padding: 2rem;
+}
+.step_4 .final_bill-box .item.addon {
+  color: hsl(231deg, 11%, 63%);
+  font-size: 1.4rem;
+}
+.step_4 .final_bill-box .item .price {
+  font-weight: 500;
+  color: hsl(213deg, 96%, 18%);
+}
+.step_4 .final_bill-box .item .name {
+  font-weight: 500;
+}
+.step_4 .final_bill-box .item.plan {
+  color: hsl(213deg, 96%, 18%);
+  font-size: 16px;
+  border-bottom: 1px solid rgba(214, 217, 230, 0.5);
+  padding: 0 0 2rem;
+}
+.step_4 .final_bill-box .item.plan .name,
+.step_4 .final_bill-box .item.plan .price {
+  font-weight: 700;
+  display: block;
+}
+.step_4 .final_bill-box .item.plan .change-link {
+  color: hsl(231deg, 11%, 63%);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid hsl(231deg, 11%, 63%);
+}
+.step_4 .final_bill-box .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.2rem 2rem 2rem;
+}
+.step_4 .final_bill-box .total .txt {
+  color: hsl(231deg, 11%, 63%);
+  font-weight: 400;
+  font-size: 15px;
+}
+.step_4 .final_bill-box .total .price {
+  color: hsl(243deg, 100%, 62%);
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.step_5 {
+  padding-top: 20%;
+  text-align: center;
+}
+.step_5 .thankyou_icon-box {
+  margin-bottom: 2.4rem;
+}
+.step_5 .thankyou_icon .heading-primary {
+  margin-bottom: 1.6rem !important;
+}
+.step_5 .success_text {
+  color: hsl(229deg, 24%, 87%);
+  padding: 0 3.2rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4.8rem;
+  height: 2.4rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213deg, 96%, 18%);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.8rem;
+  width: 1.8rem;
+  top: 0.3rem;
+  left: 0.3rem;
+  background-color: hsl(0deg, 0%, 100%);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(213deg, 96%, 18%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(213deg, 96%, 18%);
+}
+
+input:checked + .slider:before {
+  transform: translateX(2.4rem);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 3.2rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.navigation-btns {
+  position: absolute;
+  right: 9.6rem;
+  bottom: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 19rem;
+}
+
+.btn_next, .btn_back, .btn_confirm {
+  padding: 1.2rem 1.6rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+.btn_next {
+  color: hsl(229deg, 24%, 87%);
+  background-color: hsl(213deg, 96%, 18%);
+}
+
+.btn_confirm {
+  color: #fff;
+  background-color: hsl(243deg, 100%, 62%);
+}
+
+.btn_back {
+  color: hsl(231deg, 11%, 63%);
+  font-weight: 700;
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.container {
+  width: 65%;
+  height: 75%;
+  margin: 6% auto 0;
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 1rem;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.main {
+  padding: 4.8rem 9.6rem;
+  width: 75%;
+  position: relative;
+}
+.main .heading-primary {
+  color: hsl(213deg, 96%, 18%);
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+}
+.main .heading-desc {
+  color: hsl(231deg, 11%, 63%);
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}/*# sourceMappingURL=main.css.map */

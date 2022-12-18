@@ -1,0 +1,28 @@
+.step_1 {
+  .form {
+    &_group {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    &_label {
+      display: block;
+      color: $Marine-blue;
+      margin-bottom: 0.6rem;
+    }
+    &_control {
+      border: 0.5px solid $Cool-gray;
+      border-radius: 0.6rem;
+      outline: none;
+      width: 100%;
+      padding: 0.4rem 1rem;
+      height: 4rem;
+      &::placeholder {
+        color: $Cool-gray;
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+

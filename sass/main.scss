@@ -1,0 +1,19 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "components/sidebar";
+@import "components/step-1";
+@import "components/step-2";
+@import "components/step-3";
+@import "components/step-4";
+@import "components/step-5";
+@import "components/thank-you";
+@import "components/toggle-switch";
+@import "components/navigation-btns";
+@import "layout/grid";
+@import "pages/home";
