@@ -57,16 +57,31 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 37.5em) {
+  .sidebar {
+    background-image: url(./../../assets/images/bg-sidebar-mobile.svg);
+    width: 100%;
+    height: 23%;
+    background-size: cover;
+  }
+}
 .sidebar .step {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 .sidebar .steps {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 32px;
-  padding: 48px 24px;
+  gap: 3.2rem;
+  padding: 4.8rem 2.4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .sidebar .steps {
+    flex-direction: row;
+    gap: 1.6rem;
+    padding: 3.2rem 2.4rem;
+  }
 }
 .sidebar .step_num {
   color: hsl(0deg, 0%, 100%);
@@ -76,10 +91,20 @@ body {
   justify-content: center;
   width: 3.2rem;
   height: 3.2rem;
-  border: 0.2rem solid hsl(228deg, 100%, 84%);
+  border: 0.2rem solid hsl(229deg, 24%, 87%);
+}
+.sidebar .step_num-active {
+  background-color: lightblue;
+  border: none;
+  color: hsl(213deg, 96%, 18%);
 }
 .sidebar .step_head {
   text-transform: uppercase;
+}
+@media only screen and (max-width: 37.5em) {
+  .sidebar .step_head {
+    display: none;
+  }
 }
 .sidebar .step_head-sub {
   color: hsl(231deg, 11%, 63%);
@@ -92,16 +117,38 @@ body {
   font-size: 1.4rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .step_1 .navigation-btns {
+    padding-left: 64%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .step_1 .form {
+    padding: 2rem 2rem 3.2rem;
+  }
+}
 .step_1 .form_group:not(:last-child) {
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .step_1 .form_group:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
 }
 .step_1 .form_label {
   display: block;
   color: hsl(213deg, 96%, 18%);
   margin-bottom: 0.6rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .step_1 .form_label {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+}
 .step_1 .form_control {
-  border: 0.5px solid hsl(231deg, 11%, 63%);
+  border: 0.3px solid #d6d9e6;
   border-radius: 0.6rem;
   outline: none;
   width: 100%;
@@ -123,6 +170,32 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
 }
+@media only screen and (max-width: 37.5em) {
+  .step_1 .form_control::-moz-placeholder {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .step_1 .form_control:-ms-input-placeholder {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .step_1 .form_control::placeholder {
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .step_1,
+.step_2 {
+    position: absolute;
+    top: -12%;
+    width: 92%;
+    margin: 0 4%;
+    background-color: hsl(0deg, 0%, 100%);
+    border-radius: 0.8rem;
+  }
+}
 
 .plan_box {
   border: 0.1rem solid hsl(231deg, 11%, 63%);
@@ -137,6 +210,20 @@ body {
   display: flex;
   gap: 1rem;
   width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .plan_boxes {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .plan_box {
+    flex-direction: row;
+    width: 86%;
+    margin: 0 7%;
+    gap: 1.2rem;
+    padding: 1.2rem 1.4rem;
+  }
 }
 .plan_data {
   display: flex;
@@ -163,6 +250,11 @@ body {
   justify-content: center;
   padding: 1.2rem 0;
   border-radius: 0.6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .plan-switch-box {
+    margin: 7% 7% 10%;
+  }
 }
 .plan-duration {
   color: hsl(231deg, 11%, 63%);
@@ -297,8 +389,9 @@ input[type=checkbox]:checked {
   margin-bottom: 1.6rem !important;
 }
 .step_5 .success_text {
-  color: hsl(229deg, 24%, 87%);
+  color: hsl(231deg, 11%, 63%);
   padding: 0 3.2rem;
+  font-weight: 400;
 }
 
 .switch {
@@ -366,8 +459,20 @@ input:checked + .slider:before {
   width: 100%;
   padding-left: 19rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .navigation-btns {
+    background-color: hsl(0deg, 0%, 100%);
+    padding: 1.6rem 4%;
+    margin: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+  }
+}
 
-.btn_next, .btn_back, .btn_confirm {
+.btn_next,
+.btn_back,
+.btn_confirm {
   padding: 1.2rem 1.6rem;
   border: none;
   border-radius: 0.6rem;
@@ -401,21 +506,53 @@ input:checked + .slider:before {
   display: flex;
   border-radius: 1rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
 
 .main {
   padding: 4.8rem 9.6rem;
   width: 75%;
   position: relative;
 }
+@media only screen and (max-width: 37.5em) {
+  .main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 77%;
+    background-color: hsl(217deg, 100%, 97%);
+  }
+}
 .main .heading-primary {
   color: hsl(213deg, 96%, 18%);
   font-weight: 700;
   font-size: 3.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .main .heading-primary {
+    padding: 3rem 0 0 2rem;
+    margin-bottom: 1.6rem;
+    font-size: 3rem;
+  }
 }
 .main .heading-desc {
   color: hsl(231deg, 11%, 63%);
   font-weight: 400;
   font-size: 1.6rem;
   margin-bottom: 3rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .main .heading-desc {
+    padding: 0 2rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+  }
 }/*# sourceMappingURL=main.css.map */
