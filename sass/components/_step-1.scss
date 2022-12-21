@@ -46,14 +46,3 @@
     }
   }
 }
-.step_1,
-.step_2 {
-  @include respond(phone) {
-    position: absolute;
-    top: -12%;
-    width: 92%;
-    margin: 0 4%;
-    background-color: $White;
-    border-radius: 0.8rem;
-  }
-}

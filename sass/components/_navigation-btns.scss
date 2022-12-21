@@ -8,7 +8,7 @@
   padding-left: 19rem;
   @include respond(phone) {
     background-color: $White;
-    padding: 1.6rem 4%;
+    padding: 6% 4%;
     margin: 0;
     right: 0;
     bottom: 0;
@@ -37,4 +37,7 @@
   color: $Cool-gray;
   font-weight: 700;
   background-color: $White;
+  @include respond(phone) {
+    padding-left: 0.6rem;
+  }
 }

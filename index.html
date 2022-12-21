@@ -31,14 +31,14 @@
       <div class="sidebar">
         <div class="steps">
           <div class="step">
-            <div class="step_num">1</div>
+            <div class="step_num step_num-active">1</div>
             <div class="step_head">
               <p class="step_head-sub">Step1</p>
               <h4 class="step_head-main">Your info</h4>
             </div>
           </div>
           <div class="step">
-            <div class="step_num step_num-active">2</div>
+            <div class="step_num">2</div>
             <div class="step_head">
               <p class="step_head-sub">Step 2</p>
               <h4 class="step_head-main">Select plan</h4>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <main class="main">
-        <section class="step_1" style="display: none">
+        <section class="step_1" style="display: block">
           <h1 class="heading-primary">Personal info</h1>
           <p class="heading-desc">
             Please provide your name, email address, and phone number.
@@ -96,7 +96,7 @@
             <button class="btn_next">Next Step</button>
           </div>
         </section>
-        <section class="step_2" style="display: block">
+        <section class="step_2" style="display: none">
           <h1 class="heading-primary">Select your plan</h1>
           <p class="heading-desc">
             You have the option of monthly or yearly billing.
@@ -260,7 +260,7 @@
             <img
               src="./assets/images/icon-thank-you.svg"
               alt="thankyou-icon"
-              class="thankyou-icon"
+              class="thankyou_icon"
             />
           </div>
           <h1 class="heading-primary">Thank you!</h1>
