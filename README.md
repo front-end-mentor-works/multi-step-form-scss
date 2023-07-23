@@ -1,5 +1,5 @@
 # The project is live at
-https://front-end-mentor-works.github.io/multi-step-form/
+https://sinan14.github.io/multi-step-form/
 # Frontend Mentor - Multi-step form
 
 ![Design preview for the Multi-step form coding challenge](./design/desktop-preview.jpg)
